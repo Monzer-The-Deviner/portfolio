@@ -28,7 +28,7 @@ const Header = ({nav,cta}) => {
             
             
     return ( 
-        <header  className={`${hide} duration-150 w-full bg-white ${Shadow} flex fixed px-4 z-50 justify-center`}>
+        <header  className={`${hide} duration-150 w-full top-0 bg-white ${Shadow} flex fixed px-4 z-50 justify-center`}>
             <div className="flex justify-between max-w-5xl w-full">
             <img src="../assets/logo.png" alt="logo" />
 

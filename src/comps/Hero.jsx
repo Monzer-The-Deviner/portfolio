@@ -14,15 +14,15 @@ const Hero = () => {
                 console.log('scrolling');
         }
     return ( 
-        <section id='hero' className=' min-h-screen gap-4 px-4 md:px-8 lg:pt-32 pt-8 relative overflow-hidden flex w-full justify-center' >
+        <section id='hero' className='min-h-[90vh] items-end gap-4 px-4 md:px-8  prelative overflow-hidden flex w-full justify-center' >
 
                 <div className=' flex gap-4 flex-1 flex-col  lg:flex-row justify-between max-w-5xl w-full'>
-                        <div className='pt-16 relative gap-16 lg:gap-32 h-96 flex flex-col'>
+                        <div className='pt-16 gap-8 relative  flex-1 flex flex-col'>
                             <div>
-                               <h1 className='text-3xl mb-4 font-sans text-center lg:text-start font-semibold text-[#18133b]'>hey my name is Munzer</h1>
-                               <h1 className='text-5xl  text-center lg:text-start font-bold text-[#13103a]'>
+                               <h1 className='text-3xl mb-4 font-sans text-center lg:text-start text-[#18133b]'>hey my name is Munzer</h1>
+                               <h1 className='text-4xl  text-center lg:text-start font-bold text-[#13103a]'>
                                     and I'm in
-                                    <div className='flex my-6 justify-center'>
+                                    <div className='flex my-6 lg:justify-start justify-center'>
                                         L
                                         <motion.span initial={{y:0}} whileInView={{y:[0,-10,0]}} transition={{delay:0.2,duration:0.4}} className='text-[#9e4ed3] relative '>O</motion.span>
                                         <motion.span initial={{y:0}} whileInView={{y:[0,-10,0]}} transition={{delay:0.4,duration:0.4}} className='text-[#9e4ed3]'>O</motion.span>
@@ -35,20 +35,20 @@ const Hero = () => {
                                 </h1>
                              </div>
                              <div className='flex w-full gap-4 rounded-md bg-transparent'>
-                                {/* <button className='cta-btn py-2 flex-1 lg:flex-grow-0 lg:min-w-fit px-4 rounded-md'> Download CV</button> */}
+                                {/* <button className='border-4 mt-8 text-lg flex-1 lg:flex-grow-0 lg:min-w-fit border-purple-800 text-purple-800 font-semibold py-2 px-4 rounded-md'> Download CV</button> */}
                                 <motion.button
                                  onClick={()=>handleScrollTo('projects')}
                                  initial={{y:0,rotate:0}}
                                  whileHover={{y:[0,-10,-10,-10,-10,-10,-10,0],rotate:[0,5,-5,5,-5,0]}}
-                                 className='border-4 text-lg flex-1 lg:flex-grow-0 lg:min-w-fit border-purple-800 text-purple-800 font-semibold py-2 px-4 rounded-md'>
+                                 className='cta-btn py-2 flex-1 lg:flex-grow-0 lg:min-w-fit px-4 rounded-md '>
                                      My Work
                                 </motion.button>
                              </div>
                         </div>
-                        <div className='relatve flex lg:items-center size-92 pt-8 items-end justify-center lg:justify-end'>
-                            <img src={selfpic} className='lg:max-w-xl max-w-md w-full z-10 '/>
+                        <div className='flex  pt-8 items-end justify-center lg:justify-end'>
+                            <img src={selfpic} className='lg:max-w-xl w-[450px] max-w-md  z-10 '/>
     
-                </div>
+                        </div>
 
             </div>
             

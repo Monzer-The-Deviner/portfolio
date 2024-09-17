@@ -1,8 +1,8 @@
-import {Header, Hero,Contact, Projects,Skills,About,Footer}from "../comps";
+import { Hero,Contact, Projects,Skills,About}from "../comps";
 const Landing = () => {
   return (
     <>
-        <Header nav={['home','gallary','contact','about']} cta='gallary' /> 
+        
 
         <Hero /> 
         <About /> 
@@ -10,7 +10,7 @@ const Landing = () => {
         <Projects /> 
         <Contact />
 
-        <Footer />
+        
     </>
   )
 }

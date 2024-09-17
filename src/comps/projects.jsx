@@ -36,7 +36,7 @@ const Projects = () => {
     ]
     const [selProject,setSelProject] = useState(projects[0])
     return ( 
-        <section id='projects' className="w-full justify-center flex mt-16 p-2 shadow-[#17106E20] shadow-xl bg-[#F3F2FF]  ">
+        <section id='projects' className="w-full justify-center z-10 flex mt-16 p-2 shadow-[#17106E20] shadow-xl bg-[#F3F2FF]  ">
             <div className="max-w-5xl w-full flex-1 flex gap-x-8 gap-4 flex-col md:flex-row">
                 <div className="grid flex-1 grid-cols-2 gap-2">
                     {projects.map((project,index)=>
