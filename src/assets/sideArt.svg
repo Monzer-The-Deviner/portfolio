@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="314" height="2260" viewBox="0 0 314 2260">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#aab3ef"/>
+      <stop offset="1" stop-color="#772892"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect width="228" height="762" fill="none"/>
+    </clipPath>
+  </defs>
+  <rect id="Rectangle_17" data-name="Rectangle 17" width="275" height="1996" transform="translate(0 103)" fill="url(#linear-gradient)"/>
+  <rect id="Rectangle_18" data-name="Rectangle 18" width="275" height="2260" transform="translate(39)" fill="#a1a0e0"/>
+  <g id="Repeat_Grid_4" data-name="Repeat Grid 4" transform="translate(86 289)" clip-path="url(#clip-path)">
+    <g transform="translate(-1057 -122)">
+      <text id="DEVELOPER" transform="translate(1094 186)" fill="#fff" font-size="71" font-family="ArialMT, Arial"><tspan x="0" y="0">DEVELOPER</tspan></text>
+      <text id="DESIGNER" transform="translate(1311 284)" fill="#fff" font-size="72" font-family="BodoniMT-BoldItalic, Bodoni MT" font-weight="700" font-style="italic" letter-spacing="0.111em"><tspan x="-228.24" y="0">DESIGNER</tspan></text>
+    </g>
+    <g transform="translate(-1057 68)">
+      <text id="DEVELOPER-2" data-name="DEVELOPER" transform="translate(1094 186)" fill="#fff" font-size="71" font-family="ArialMT, Arial"><tspan x="0" y="0">DEVELOPER</tspan></text>
+      <text id="DESIGNER-2" data-name="DESIGNER" transform="translate(1311 284)" fill="#fff" font-size="72" font-family="BodoniMT-BoldItalic, Bodoni MT" font-weight="700" font-style="italic" letter-spacing="0.111em"><tspan x="-228.24" y="0">DESIGNER</tspan></text>
+    </g>
+    <g transform="translate(-1057 258)">
+      <text id="DEVELOPER-3" data-name="DEVELOPER" transform="translate(1094 186)" fill="#fff" font-size="71" font-family="ArialMT, Arial"><tspan x="0" y="0">DEVELOPER</tspan></text>
+      <text id="DESIGNER-3" data-name="DESIGNER" transform="translate(1311 284)" fill="#fff" font-size="72" font-family="BodoniMT-BoldItalic, Bodoni MT" font-weight="700" font-style="italic" letter-spacing="0.111em"><tspan x="-228.24" y="0">DESIGNER</tspan></text>
+    </g>
+    <g transform="translate(-1057 448)">
+      <text id="DEVELOPER-4" data-name="DEVELOPER" transform="translate(1094 186)" fill="#fff" font-size="71" font-family="ArialMT, Arial"><tspan x="0" y="0">DEVELOPER</tspan></text>
+      <text id="DESIGNER-4" data-name="DESIGNER" transform="translate(1311 284)" fill="#fff" font-size="72" font-family="BodoniMT-BoldItalic, Bodoni MT" font-weight="700" font-style="italic" letter-spacing="0.111em"><tspan x="-228.24" y="0">DESIGNER</tspan></text>
+    </g>
+    <g transform="translate(-1057 638)">
+      <text id="DEVELOPER-5" data-name="DEVELOPER" transform="translate(1094 186)" fill="#fff" font-size="71" font-family="ArialMT, Arial"><tspan x="0" y="0">DEVELOPER</tspan></text>
+      <text id="DESIGNER-5" data-name="DESIGNER" transform="translate(1311 284)" fill="#fff" font-size="72" font-family="BodoniMT-BoldItalic, Bodoni MT" font-weight="700" font-style="italic" letter-spacing="0.111em"><tspan x="-228.24" y="0">DESIGNER</tspan></text>
+    </g>
+  </g>
+</svg>

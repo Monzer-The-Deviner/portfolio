@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.job{
+  animation: job-change 6s ease-in-out 0 infinite forwards;
+  contain: content;
+  padding: 2px;
+  width: 100%;
+  background-color: aqua;
+  background-image: url(./assets/2bbd19ab27f9520d075df2226b330592.jpg);
+}
+
+@layer components {
+  .cta-btn{
+    @apply bg-gradient-to-tr from-[#AAB3EF] text-lg to-[#8145A5] py-2 px-4 rounded-md flex items-center justify-center text-white
+  }
+}
+
+
+
+@keyframes job-change {
+  0%{
+    content: 'developer';
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  30%{
+    content: 'developer';
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  35%{
+    content: 'developer';
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  36%{
+    content: '';
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  30%{
+    content: 'designer';
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  60%{
+    content: 'designer';
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  65%{
+    content: 'designer';
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  66%{
+    content: '';
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  70%{
+    content: '100% Geek';
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  90%{
+    content: '100% Geek';
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  95%{
+    content: '100% Geek';
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100%{
+    content: '';
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+}
