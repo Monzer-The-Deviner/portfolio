@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import selfpic from '../assets/heroimg.png'
 import decor from '../assets/Asset 4.svg'
+import nodeicon from '../assets/Asset 8.svg'
+import reacticon from '../assets/Asset 9.svg'
 
 const Hero = () => {
 
@@ -18,6 +20,8 @@ const Hero = () => {
     return ( 
         <section id='hero' className='min-h-[90vh] items-start pt-8 gap-4 px-4 md:px-8  relative overflow-hidden flex w-full justify-center' >
                 <img src={decor} className ="absolute -top-8 left-80 brightness-125 w-[500px]"  alt="" />
+                <img src={reacticon} className ="absolute top-5 animate-spin left-0 brightness-125 w-20" style={{animationDuration:'3s'}}  alt="" />
+                <img src={nodeicon} className ="absolute top-[500px] left-[500px] brightness-125 w-16"  alt="" />
                 
                 <div className=' flex gap-4 flex-1 flex-col   lg:flex-row justify-between max-w-5xl w-full'>
                         <div className='pt-16 gap-8 relative  flex-1 flex flex-col'>

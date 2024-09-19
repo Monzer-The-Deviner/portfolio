@@ -1,18 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
-  padding: 0;
-  margin: 0;
-}
 
-.job{
-  animation: job-change 6s ease-in-out 0 infinite forwards;
-  contain: content;
-  padding: 2px;
-  width: 100%;
-  background-color: aqua;
-  background-image: url(./assets/2bbd19ab27f9520d075df2226b330592.jpg);
+.floating{
+  animation: floating 3s ease 0 infinite forwards true;
+}
+.animation-duration-3{
+  animation-duration: 3s;
 }
 
 @layer components {
@@ -23,65 +17,13 @@
 
 
 
-@keyframes job-change {
+@keyframes float {
+  
   0%{
-    content: 'developer';
-    transform: translateY(0px);
-    opacity: 1;
+    translate: 16px;
   }
-  30%{
-    content: 'developer';
-    transform: translateY(0px);
-    opacity: 1;
-  }
-  35%{
-    content: 'developer';
-    transform: translateY(200px);
-    opacity: 0;
-  }
-  36%{
-    content: '';
-    transform: translateY(-200px);
-    opacity: 0;
-  }
-  30%{
-    content: 'designer';
-    transform: translateY(0px);
-    opacity: 1;
-  }
-  60%{
-    content: 'designer';
-    transform: translateY(0px);
-    opacity: 1;
-  }
-  65%{
-    content: 'designer';
-    transform: translateY(200px);
-    opacity: 0;
-  }
-  66%{
-    content: '';
-    transform: translateY(-200px);
-    opacity: 0;
-  }
-  70%{
-    content: '100% Geek';
-    transform: translateY(0px);
-    opacity: 1;
-  }
-  90%{
-    content: '100% Geek';
-    transform: translateY(0px);
-    opacity: 1;
-  }
-  95%{
-    content: '100% Geek';
-    transform: translateY(200px);
-    opacity: 0;
-  }
+  
   100%{
-    content: '';
-    transform: translateY(-200px);
-    opacity: 0;
+    translate: 160px;
   }
 }
