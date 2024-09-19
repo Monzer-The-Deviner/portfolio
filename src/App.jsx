@@ -11,7 +11,7 @@ const App = () =>{
   return(
   <Router>
     <Header nav={['home','gallary','contact','about']} cta='gallary' /> 
-    <div className="w-full flex mt-10 bg-[#f2edf5] flex-col gap-32 px-2 md:px-0 overflow-hidden text-[#07041b] items-center">
+    <div className="w-full flex pb-32 bg-[#f2edf5] flex-col gap-32 px-2 md:px-0 overflow-hidden text-[#07041b] items-center">
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/projects" element={<ProjectsPage />} />

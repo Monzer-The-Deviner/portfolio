@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import portfolioPic from '../assets/2bbd19ab27f9520d075df2226b330592.jpg'
-import portfolioPic2 from '../assets/1aa0dc3b89d74dd1d717c59d35feb50a.jpg'
+import portfolioPic from '../assets/vecteezy_website-presentation-with-smartphone-mockup_13097385.jpg'
+import portfolioPic2 from '../assets/Artboard-4-opy.png'
 import portfolioPic3 from '../assets/9ab84ae714d32afef91719f328483dec.jpg'
 import portfolioPic4 from '../assets/bf33a96f96931c776d27b03ba3dd7ed5.jpg'
 const Projects = () => {
@@ -41,7 +41,7 @@ const Projects = () => {
                 <div className="grid flex-1 grid-cols-2 gap-2">
                     {projects.map((project,index)=>
                         <div key={index}
-                         className="bg-cover flex p-4 items-end bg-center min-h-40 rounded-md text-cyan-50"
+                         className="bg-cover flex p-4 items-end bg-center shadow-md min-h-40 rounded-md text-cyan-50"
                          style={{backgroundImage:`url(${project.imgURL})`}}
                          onClick={()=>setSelProject(projects[index])}
                          >
