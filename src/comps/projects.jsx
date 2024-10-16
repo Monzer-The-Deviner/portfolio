@@ -3,38 +3,11 @@ import portfolioPic from '../assets/vecteezy_website-presentation-with-smartphon
 import portfolioPic2 from '../assets/Artboard-4-opy.png'
 import portfolioPic3 from '../assets/9ab84ae714d32afef91719f328483dec.jpg'
 import portfolioPic4 from '../assets/bf33a96f96931c776d27b03ba3dd7ed5.jpg'
+import { getprojects } from '../../sanityClinet'
 const Projects = () => {
-    const projects = [
-        {
-            title:'portfolio',
-            imgURL: portfolioPic,
-            link:'#',
-            summery: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque illum voluptatibus molestiae nihil ipsa? Modi, natus unde necessitatibus minus corrupti quo harum assumenda" ,
-            technologies:[]
-        },
-        {
-            title:'portfolio',
-            imgURL: portfolioPic2,
-            link:'#',
-            summery: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque illum voluptatibus molestiae nihil ipsa? Modi, natus unde necessitatibus minus corrupti quo harum assumenda" ,
-            technologies:[]
-        },
-        {
-            title:'portfolio',
-            imgURL: portfolioPic3,
-            link:'#',
-            summery: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque illum voluptatibus molestiae nihil ipsa? Modi, natus unde necessitatibus minus corrupti quo harum assumenda" ,
-            technologies:[]
-        },
-        {
-            title:'portfolio',
-            imgURL: portfolioPic4,
-            link:'#',
-            summery: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque illum voluptatibus molestiae nihil ipsa? Modi, natus unde necessitatibus minus corrupti quo harum assumenda" ,
-            technologies:[]
-        },
-    ]
+    const [projects, setprojects] = useState([]);
     const [selProject,setSelProject] = useState(projects[0])
+    getprojects().then(data=>setprojects(data))
     return ( 
         <section id='projects' className="w-full justify-center z-10 flex mt-16 p-2 shadow-[#17106E20] shadow-xl bg-[#F3F2FF]  ">
             <div className="max-w-5xl w-full flex-1 flex gap-x-8 gap-4 flex-col md:flex-row">
