@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/favicon.png"
 const Header = ({nav,cta}) => {
     const [hide, setHide] = useState(false);
     const [Shadow, setShadow] = useState(false);
@@ -30,9 +31,11 @@ const Header = ({nav,cta}) => {
     return ( 
         <header  className={`${hide} duration-150 items-center w-full top-0 bg-white ${Shadow} flex fixed px-4 z-50 justify-center`}>
             <div className="flex justify-between max-w-5xl w-full">
-            <img src="../assets/logo.png" className = '' alt="logo" />
+            <img src={logo} className = 'h-10' alt="logo" />
 
             <ul className="flex items-center lg:gap-6 gap-4 py-1">
+                <Link to={'/'}>Home</Link>
+                <Link to={'/projects'}>Gallary</Link>
                 {nav.map((element,index)=>
                 ( <li key={index}>
                     <a href={`#${element}`} 

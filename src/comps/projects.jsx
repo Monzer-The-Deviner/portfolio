@@ -1,42 +1,70 @@
-import { useState } from 'react'
-import portfolioPic from '../assets/vecteezy_website-presentation-with-smartphone-mockup_13097385.jpg'
-import portfolioPic2 from '../assets/Artboard-4-opy.png'
-import portfolioPic3 from '../assets/9ab84ae714d32afef91719f328483dec.jpg'
-import portfolioPic4 from '../assets/bf33a96f96931c776d27b03ba3dd7ed5.jpg'
-import { getprojects } from '../../sanityClinet'
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useState } from 'react'
+import { getprojects, urlFor } from '../../sanityClinet'
+import { Link } from 'react-router-dom';
+import { AiOutlineLink, AiOutlineMore } from 'react-icons/ai';
+import Loading from './Loading';
+
 const Projects = () => {
     const [projects, setprojects] = useState([]);
     const [selProject,setSelProject] = useState(projects[0])
-    getprojects().then(data=>setprojects(data))
+    const [loading, setloading] = useState(false);
+  const [error, seterror] = useState(false);
+  useEffect(()=>{
+      setloading(true)
+      seterror(false)
+      getprojects()
+        .then(data =>{ 
+            setprojects(data)
+            
+            setloading(false)
+            })
+        .catch(error=>{
+                setloading(false)
+                seterror(error)
+            })
+      
+        console.log(projects)
+    },[])
+    useEffect(()=>setSelProject(projects[0]),[projects])
     return ( 
-        <section id='projects' className="w-full justify-center z-10 flex mt-16 p-2 shadow-[#17106E20] shadow-xl bg-[#F3F2FF]  ">
-            <div className="max-w-5xl w-full flex-1 flex gap-x-8 gap-4 flex-col md:flex-row">
-                <div className="grid flex-1 grid-cols-2 gap-2">
+        <section id='projects' className="w-full min-h-60 justify-center z-10 flex mt-16 p-2 shadow-[#17106E20] shadow-xl bg-[#F3F2FF]  ">
+            
+            <Loading error={error} loading={loading} />
+           {!(loading||error)&& <div className="max-w-5xl w-full flex-1 flex gap-x-8 gap-4 flex-col md:flex-row">
+                <div className="grid flex-1 relative grid-cols-2 gap-2">
                     {projects.map((project,index)=>
                         <div key={index}
-                         className="bg-cover flex p-4 items-end bg-center shadow-md min-h-40 rounded-md text-cyan-50"
-                         style={{backgroundImage:`url(${project.imgURL})`}}
+                         className="bg-cover flex p-4 items-end bg-center shadow-md min-h-40 max-h-52 rounded-md text-cyan-50"
+                         style={{backgroundImage:`url(${project?urlFor(project?.image):''})`}}
                          onClick={()=>setSelProject(projects[index])}
-                         >
-                            we are here
-                        </div>
+                         >{project?.name}</div>
                     )}
+                <Link title='more projects' to={'/projects'}
+                 className='absolute right-0 self-center'>
+                    <AiOutlineMore className='  rotate-90 rounded-full p-2 shadow-md bg-white ' size={30}/>
+                </Link>
                 </div> 
-                
-                    <div className="justify-end overflow-hidden flex-col min-h-80  text-lg text-white rounded-lg flex bg-cover bg-center flex-1" style={{backgroundImage:`url(${selProject.imgURL})`}}>
+                    <div className="justify-end overflow-hidden flex-col min-h-80  text-lg text-white rounded-lg flex bg-cover bg-center flex-1" style={{backgroundImage:`url(${selProject?urlFor(selProject?.image):''})`}}>
                         <div className='flex flex-col p-4  gap-2  bg-gradient-to-t from-slate-950 to-transparent'>
                             <div className='text-whte font-semibold text-lg justify-between flex gap-4'> 
-                                {selProject.title}
-                                <div className='backdrop-blur-sm flex gap-4 p-2 bg-[#00000030]'>
-                                    {['ts','git','sanity'].map((tech,i)=><span key={i}>{tech}</span>)}
+                                {selProject?.name}
+                                <div className='backdrop-blur-sm flex gap-4 rounded-md p-2 bg-[#00000030]'>
+                                    {selProject?.tech.map((tech,i)=>
+                                    <div className='flex size-10' key={i}>
+                                        <img src={urlFor(tech.logo)} className='flex-1' />
+                                    </div>)}
+                                    
                                 </div>
                             </div>
-                            <p className='text-sm'>{selProject.summery}</p>
-                            <div className='text-whte flex gap-4'><div className='bg-white px-2 rounded-md text-slate-950'>visit</div> <div>details</div></div>
+                            <p className='text-sm'>{selProject?.shortDescription}</p>
+                            <div className='text-whte flex gap-4'><a href={selProject?.url||''} className='bg-white flex gap-2 px-2 rounded-md items-center text-slate-950'><AiOutlineLink size={22} /> visit</a> <Link to={`project/${selProject?.slug}`}>details</Link></div>
                         </div>
                     </div>
 
-            </div>
+            </div>}
+            
+            
         </section>
      );
 }
