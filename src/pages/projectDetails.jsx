@@ -53,7 +53,7 @@ const ProjectDetails = () => {
               <span className='text-lg font-semibold'>name</span>
           </div>
           {proj?.tech.map((tech,i)=>
-            <div className='flex flex-col items-center w-36' key={i}>
+            <div className='flex flex-col items-center w-20' key={i}>
               <img src={urlFor(tech.logo)} className='flex-1' />
               <span className='text-lg font-semibold'>{tech.name}</span>
             </div>)}
