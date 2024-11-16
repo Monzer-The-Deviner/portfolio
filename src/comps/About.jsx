@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import profile from '../assets/AboutMe.png';
+import profile from '../assets/about.png';
 import decoration2 from '../assets/Asset 3.svg'
 const About = () => {
 
@@ -15,13 +15,13 @@ const About = () => {
             <div className="flex-1 flex md:flex-row flex-col  gap-8 md:gap-16 max-w-5xl w-full">
                 
                 <div className=" flex bg-indigo-500 lg:h-96 h-60  rounded-md md:aspect-square  ">
-                    <div className=" bg-indigo-900 overflow-hidden flex-1 bg-center bg-no-repeat bg-contain rounded-md translate-x-2 translate-y-2 " style={{backgroundImage:`url(${profile})`}}>
+                    <div className=" bg-indigo-900 overflow-hidden bg-left-bottom flex-1 bg-no-repeat bg-contain rounded-md translate-x-2 translate-y-2 " style={{backgroundImage:`url(${profile})`}}>
                     </div>
                 </div>
 
                 <div className="flex-1">
                     <h3 className="font-mono text-4xl my-4 font-bold">About me</h3>
-                    <p className="text-slate-700 text-lg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa dicta debitis numquam a voluptatibus, atque, ad minima sunt, ab doloremque nobis error rerum facere iste itaque vero! Doloremque, ratione possimus.</p>
+                    <p className="text-slate-700 text-lg">A dedicated <strong className="font-semibold">full-stack developer</strong> specializing in creating  interactive and user-focused web applications. With skills in  <strong className="font-semibold">React, Typescript, Django,<span className="font-normal"> and </span>Express</strong>. I bridge both front-end and back-end development to deliver seamless solutions. My toolkit also includes  <strong className="font-semibold">Firebase, Sanity CMS, <span className="font-normal">and</span> Redux </strong> for dynamic scalable applications.{"I'm"} passionate about building high-quality projects that makes a diffirence.</p>
                 </div>
             
             </div>

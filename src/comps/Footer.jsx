@@ -8,7 +8,7 @@ const Footer = () => {
             <img src={logo} className="h-8 brightness-[1000%]" />
             <div className="flex gap-4">
               <motion.a 
-              href="https://www.tiktok.com"
+              href="https://vm.tiktok.com/ZMhsv8kl/"
               initial={{y:0}}
               whileInView={{y:[0,-10,0]}}
               transition={{delay:0.2,duration:0.4}}
@@ -16,7 +16,7 @@ const Footer = () => {
                 <AiFillTikTok size={24} color="#fff"  />
               </motion.a>
               <motion.a 
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/monzers_art?igsh=ZGUzMzM3NWJiOQ=="
               initial={{y:0}}
               whileInView={{y:[0,-10,0]}}
               transition={{delay:0.4,duration:0.4}}
@@ -24,7 +24,7 @@ const Footer = () => {
                 <AiFillInstagram size={24} color="#fff"  />
               </motion.a>
               <motion.a 
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/monzer-el-jilani-5522a3263"
               initial={{y:0}}
               whileInView={{y:[0,-10,0]}}
               transition={{delay:0.6,duration:0.4}}
